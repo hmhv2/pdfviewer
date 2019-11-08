@@ -81320,9 +81320,10 @@ pdfDoc[id] = null;
    
 
      renderPage(pageNum[id]);
+
    });
 
-   renderPage(pageNum[id]);
+   queueRenderPage(pageNum[id]);  
  }
  
 
