@@ -81321,7 +81321,7 @@ pdfDoc[id] = null;
 
      renderPage(pageNum[id]);
    });
-setTimeout(function(){queueRenderPage(pageNum[id]);},1000);
+setTimeout(function(){queueRenderPage(pageNum[id]);},id*2000);
 
  }
  
