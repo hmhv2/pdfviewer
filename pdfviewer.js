@@ -81360,7 +81360,8 @@ else{
     document.getElementById('overlaycontent'+pdfcounter).innerHTML+='</div><div><canvas id="the-canvas' +pdfcounter+ '" oncontextmenu="return false">';
     document.getElementById('overlaycontent'+pdfcounter).innerHTML+='</canvas>';
   }
-  pdf[pdfcounter]=new init_pdf(link,pdfcounter,w);
+
+  setTimeout(function(){pdf[pdfcounter]=new init_pdf(link,pdfcounter,w);},pdfcounter*1000);
 }
 pdfcounter++;
 }
