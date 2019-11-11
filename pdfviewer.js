@@ -81214,7 +81214,7 @@ var canvas=[];
 var ctx=[];
 var pdfDoc = [];
 
- function init_pdf(url_input, id, width1){
+  init_pdf = function(url_input, id, width1){
 
 
 pdfjsLib[id] = window['pdfjs-dist/build/pdf'];
@@ -81320,7 +81320,6 @@ pdfDoc[id] = null;
    
 
      renderPage(pageNum[id]);
-     queueRenderPage(pageNum[id]);  
    });
 
 
@@ -81361,7 +81360,7 @@ else{
     document.getElementById('overlaycontent'+pdfcounter).innerHTML+='</canvas>';
   }
 
-  setTimeout(function(){pdf[pdfcounter]=new init_pdf(link,pdfcounter,w);},pdfcounter*1000);
+pdf[pdfcounter]=new init_pdf(link,pdfcounter,w);
 }
 pdfcounter++;
 }
