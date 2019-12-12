@@ -81346,13 +81346,13 @@ else{
     document.getElementById(div).style.display="block";
     document.getElementById(div).innerHTML='<div class="overlaycontent" id="overlaycontent'+pdfcounter+'"></div>';
     document.getElementById('overlaycontent'+pdfcounter).innerHTML+='<div class="pdfnavigationoverlay" id="pdfnav' +pdfcounter+ '"></div>';
-    document.getElementById('pdfnav' +pdfcounter).innerHTML+='<a class="btn btn-default prev" id="prev' +pdfcounter+ '" style="display:none">Zurück</a>';
+    document.getElementById('pdfnav' +pdfcounter).innerHTML+='<a class="btn btn-default prev button" id="prev' +pdfcounter+ '" style="display:none">Zurück</a>';
       
     document.getElementById('pdfnav' +pdfcounter).innerHTML+='&nbsp;<span>Seite: <span id="page_num' +pdfcounter+ '">';
     document.getElementById('pdfnav' +pdfcounter).innerHTML+='</span> / <span id="page_count' +pdfcounter+ '">';
     document.getElementById('pdfnav' +pdfcounter).innerHTML+='</span>';
-    document.getElementById('pdfnav' +pdfcounter).innerHTML+='</span>&nbsp;<a class="btn btn-default next" id="next' +pdfcounter+ '">Weiter';
-    document.getElementById('pdfnav' +pdfcounter).innerHTML+='</a> <a class="closeoverlay btn btn-default" onclick="document.getElementById(\''+div+'\').style.display=\'none\'">Schließen';
+    document.getElementById('pdfnav' +pdfcounter).innerHTML+='</span>&nbsp;<a class="btn btn-default next button" id="next' +pdfcounter+ '">Weiter';
+    document.getElementById('pdfnav' +pdfcounter).innerHTML+='</a> <a class="closeoverlay btn btn-default button" onclick="document.getElementById(\''+div+'\').style.display=\'none\'">Schließen';
     document.getElementById('pdfnav' +pdfcounter).innerHTML+='</a>';
     document.getElementById('overlaycontent'+pdfcounter).innerHTML+='</div><div><canvas id="the-canvas' +pdfcounter+ '" oncontextmenu="return false">';
     document.getElementById('overlaycontent'+pdfcounter).innerHTML+='</canvas>';
