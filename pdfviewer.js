@@ -81354,7 +81354,7 @@ else{
     document.getElementById('pdfnav' +pdfcounter).innerHTML+='</span> / <span id="page_count' +pdfcounter+ '">';
     document.getElementById('pdfnav' +pdfcounter).innerHTML+='</span>';
     document.getElementById('pdfnav' +pdfcounter).innerHTML+='</span>&nbsp;<a class="btn btn-default next button" id="next' +pdfcounter+ '">Weiter';
-    document.getElementById('pdfnav' +pdfcounter).innerHTML+='</a> <a class="closeoverlay btn btn-default button" onclick="document.getElementById(\''+div+'\').style.display=\'none\';document.getElementById("jg-header").style.display=\'block\';document.getElementsByClassName("localmenu-row")[0].style.display=\'block\'">Schließen';
+    document.getElementById('pdfnav' +pdfcounter).innerHTML+='</a> <a class="closeoverlay btn btn-default button" onclick="document.getElementById(\''+div+'\').style.display=\'none\';document.getElementById(\'jg-header\').style.display=\'block\';document.getElementsByClassName(\'localmenu-row\')[0].style.display=\'block\'">Schließen';
     document.getElementById('pdfnav' +pdfcounter).innerHTML+='</a>';
     document.getElementById('overlaycontent'+pdfcounter).innerHTML+='</div><div><canvas id="the-canvas' +pdfcounter+ '" oncontextmenu="return false">';
     document.getElementById('overlaycontent'+pdfcounter).innerHTML+='</canvas>';
