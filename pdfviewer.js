@@ -81338,7 +81338,7 @@ pdfDoc[id] = null;
    pdfjsLib[id].getDocument(url[id]).promise.then(function(pdfDoc_) {
      pdfDoc[id] = pdfDoc_;
      document.getElementById('page_count'+id).textContent = pdfDoc[id].numPages;
-   
+     document.getElementById('page_count'+id+'_2').textContent = pdfDoc[id].numPages;
 
      renderPage(pageNum[id]);
    });
