@@ -81361,11 +81361,11 @@ else{
     document.getElementById('pdfnav' +pdfcounter).innerHTML+='</span>&nbsp;<a class="btn btn-default next" id="next' +pdfcounter+ '">Weiter</a>';
 
     document.getElementById(div).innerHTML+='<p><canvas id="the-canvas' +pdfcounter+ '" oncontextmenu="return false"></canvas></p>';
-    document.getElementById(div).innerHTML='<div class="pdfnavigation" id="pdfnav' +pdfcounter+ '_2"></div>';
-    document.getElementById('pdfnav' +pdfcounter).innerHTML+='<a class="btn btn-default prev" id="prev' +pdfcounter+ '_2" style="display:none">Zurück</a>';
-    document.getElementById('pdfnav' +pdfcounter).innerHTML+='&nbsp;<span>Seite: <span id="page_num' +pdfcounter+ '_2">';
-    document.getElementById('pdfnav' +pdfcounter).innerHTML+=' / <span id="page_count' +pdfcounter+ '_2"></span>';
-    document.getElementById('pdfnav' +pdfcounter).innerHTML+='</span>&nbsp;<a class="btn btn-default next" id="next' +pdfcounter+ '_2">Weiter</a>';
+    document.getElementById(div).innerHTML+='<div class="pdfnavigation" id="pdfnav' +pdfcounter+ '_2"></div>';
+    document.getElementById('pdfnav' +pdfcounter+'_2').innerHTML+='<a class="btn btn-default prev" id="prev' +pdfcounter+ '_2" style="display:none">Zurück</a>';
+    document.getElementById('pdfnav' +pdfcounter+'_2').innerHTML+='&nbsp;<span>Seite: <span id="page_num' +pdfcounter+ '_2">';
+    document.getElementById('pdfnav' +pdfcounter+'_2').innerHTML+=' / <span id="page_count' +pdfcounter+ '_2"></span>';
+    document.getElementById('pdfnav' +pdfcounter+'_2').innerHTML+='</span>&nbsp;<a class="btn btn-default next" id="next' +pdfcounter+ '_2">Weiter</a>';
   }
   else{
     document.getElementById("jg-header").style.display="none";
