@@ -81275,19 +81275,24 @@ pdfDoc[id] = null;
    
      // Update page counters
      document.getElementById('page_num'+id).textContent = num;
+     document.getElementById('page_num'+id+'_2').textContent = num;
    }
 
    function queueRenderPage(num) {
  if(pageNum[id] <= 1){
  document.getElementById("prev"+id).style.display="none";
+ document.getElementById("prev"+id+'_2').style.display="none";
  }else{
  document.getElementById("prev"+id).style.display="inline-block";
+ document.getElementById("prev"+id+'_2').style.display="inline-block";
  }
  
  if(pageNum[id] >= document.getElementById("page_count"+id).innerHTML){
  document.getElementById("next"+id).style.display="none";
+ document.getElementById("next"+id+'_2').style.display="none";
  }else{
  document.getElementById("next"+id).style.display="inline-block";
+ document.getElementById("next"+id+'_2').style.display="inline-block";
  }
  
  
@@ -81305,8 +81310,24 @@ pdfDoc[id] = null;
      pageNum[id]--;
      queueRenderPage(pageNum[id]);
    });
-   
+  
+   document.getElementById('prev'+id+'_2').addEventListener('click', function(){
+    if (pageNum[id] <= 1) {
+       return;
+     }
+     pageNum[id]--;
+     queueRenderPage(pageNum[id]);
+   });
+
    document.getElementById('next'+id).addEventListener('click', function(){
+    if (pageNum[id] >= pdfDoc[id].numPages) {
+       return;
+     }
+     pageNum[id]++;
+     queueRenderPage(pageNum[id]);
+   });
+
+   document.getElementById('next'+id+'_2').addEventListener('click', function(){
     if (pageNum[id] >= pdfDoc[id].numPages) {
        return;
      }
@@ -81340,7 +81361,11 @@ else{
     document.getElementById('pdfnav' +pdfcounter).innerHTML+='</span>&nbsp;<a class="btn btn-default next" id="next' +pdfcounter+ '">Weiter</a>';
 
     document.getElementById(div).innerHTML+='<p><canvas id="the-canvas' +pdfcounter+ '" oncontextmenu="return false"></canvas></p>';
-
+    document.getElementById(div).innerHTML='<div class="pdfnavigation" id="pdfnav' +pdfcounter+ '_2"></div>';
+    document.getElementById('pdfnav' +pdfcounter).innerHTML+='<a class="btn btn-default prev" id="prev' +pdfcounter+ '_2" style="display:none">Zurück</a>';
+    document.getElementById('pdfnav' +pdfcounter).innerHTML+='&nbsp;<span>Seite: <span id="page_num' +pdfcounter+ '_2">';
+    document.getElementById('pdfnav' +pdfcounter).innerHTML+=' / <span id="page_count' +pdfcounter+ '_2"></span>';
+    document.getElementById('pdfnav' +pdfcounter).innerHTML+='</span>&nbsp;<a class="btn btn-default next" id="next' +pdfcounter+ '_2">Weiter</a>';
   }
   else{
     document.getElementById("jg-header").style.display="none";
